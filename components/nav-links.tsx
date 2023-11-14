@@ -9,9 +9,10 @@ export function NavLinks({
   ...props
 }: React.HTMLAttributes<HTMLElement>) {
   const pathname = usePathname() 
+  console.log(pathname)
 
   const navLinks = [
-    { title: 'About me', href: '/about' },
+    { title: 'About me', href: '/' },
     { title: 'Projects', href: '/projects' },
     { title: 'Articles', href: '/articles' },
     { title: 'Contact', href: '/contact' },
