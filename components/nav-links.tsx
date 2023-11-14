@@ -27,10 +27,14 @@ export function NavLinks({
         <Link
           key={link.title}
           href={link.href}
-          className={`mx-2 text-sm font-medium text-muted-foreground hover:text-primary ${pathname === link.href ? 'text-black' : ''
-            }`}
+          passHref legacyBehavior
         >
-          {link.title}
+          <a className={cn(
+            "mx-2 text-sm font-medium transition-colors hover:text-primary",
+            pathname === link.href ? 'text-primary' : 'text-muted-foreground'
+          )}>
+            {link.title}
+          </a>
         </Link>
       ))}
     </nav>
